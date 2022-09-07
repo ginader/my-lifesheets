@@ -51,11 +51,31 @@
 		</table>
 	</h-chart>
 	<figcaption>Average intensity per month</figcaption></figure>
+				<figure data-type="chart" class="chart appearance-stretch type-pie" style="min-width: min(300px, 100vw)">
+	
+	<h-chart type="pie" x="b">
+		<table>
+			<thead>
+				<tr>
+					<th hc-name="a">Left</th>
+					<th hc-name="b">Number of left values</th>
+				</tr>
+			</thead>
+			<tbody mv-list="chart18" mv-value="sort(groupBy(entry.left, entry.left), '$value')">
+				<tr mv-list-item mv-group>
+					<td>[$value]</td>
+					<td>[count($items)]</td>
+				</tr>
+			</tbody>
+		</table>
+	</h-chart>
+	<figcaption>Number of left values per left value</figcaption></figure>
 			</div>
 		<a id=entries></a>
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Migrane</button>
 				<span property="Timesince" data-type="expression" data-prefix="Time since last Migrane: " mv-value="duration($now - last(end_date_time))"></span>
+				<button data-type="action" mv-action="set(last(entry), end_time: $now)">End last Migrane</button>
 			</div>
 		<section mv-list="entry">
 			<article mv-list-item class="entry">

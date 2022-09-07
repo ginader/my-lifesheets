@@ -92,6 +92,16 @@
 				"icon": "🟥"
 			},
 			"name": "Cigarette"
+		},
+		{
+			"type": "expression",
+			"scope": "entry",
+			"settings": {
+				"expression": "Cigarette",
+				"formatting": [
+					"b"
+				]
+			}
 		}
 	],
 	"root": [
@@ -107,7 +117,40 @@
 				"set_pairs": [],
 				"filter_pairs": []
 			}
+		},
+		{
+			"type": "action",
+			"scope": "root",
+			"settings": {
+				"target_preset": "new",
+				"target": "add(entry)",
+				"set_pairs": [
+					{
+						"name": "Cigarette",
+						"value": "2"
+					}
+				],
+				"filter_pairs": [],
+				"label": "➕➕ Add 2 Cigarettes"
+			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"expression": "duration($now - first(date_time))"
+			}
 		}
 	],
-	"charts": []
+	"charts": [
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"group_by": "day",
+				"aggregate": "sum",
+				"aggregate_of": "Cigarette"
+			}
+		}
+	]
 }

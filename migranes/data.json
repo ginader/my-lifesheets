@@ -26,6 +26,15 @@
 			"intensity": 4,
 			"left": false,
 			"right": true
+		},
+		{
+			"end_time": "17:07",
+			"date": "2022-09-07",
+			"time": "14:00",
+			"end_date": "2022-09-07",
+			"intensity": 3,
+			"left": false,
+			"right": true
 		}
 	]
 }

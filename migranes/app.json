@@ -217,7 +217,7 @@
 				"set_pairs": [
 					{
 						"name": "end_time",
-						"value": "$now"
+						"value": "time($now)"
 					}
 				],
 				"filter_pairs": [],

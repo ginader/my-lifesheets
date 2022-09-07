@@ -75,7 +75,7 @@
 			<div class="field-row">
 				<button data-type="action" data-show="edit" mv-action="add(entry)">➕ Add Migrane</button>
 				<span property="Timesince" data-type="expression" data-prefix="Time since last Migrane: " mv-value="duration($now - last(end_date_time))"></span>
-				<button data-type="action" mv-action="set(last(entry), end_time: $now)">End last Migrane</button>
+				<button data-type="action" mv-action="set(last(entry), end_time: time($now))">End last Migrane</button>
 			</div>
 		<section mv-list="entry">
 			<article mv-list-item class="entry">

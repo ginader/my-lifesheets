@@ -198,6 +198,15 @@
 				"set_pairs": [],
 				"filter_pairs": []
 			}
+		},
+		{
+			"type": "expression",
+			"scope": "root",
+			"settings": {
+				"prefix": "Time since last Migrane: ",
+				"expression": "duration($now - last(end_date_time))"
+			},
+			"name": "Timesince"
 		}
 	],
 	"charts": []

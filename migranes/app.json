@@ -207,6 +207,22 @@
 				"expression": "duration($now - last(end_date_time))"
 			},
 			"name": "Timesince"
+		},
+		{
+			"type": "action",
+			"scope": "root",
+			"settings": {
+				"target_preset": "last",
+				"target": "last(entry)",
+				"set_pairs": [
+					{
+						"name": "end_time",
+						"value": "$now"
+					}
+				],
+				"filter_pairs": [],
+				"label": "End last Migrane"
+			}
 		}
 	],
 	"charts": [
@@ -218,6 +234,16 @@
 				"aggregate": "average",
 				"aggregate_of": "intensity",
 				"orientation": "horizontal"
+			}
+		},
+		{
+			"type": "chart",
+			"scope": "charts",
+			"settings": {
+				"type": "pie",
+				"aggregate": "count",
+				"aggregate_of": "left",
+				"group_by": "left"
 			}
 		}
 	]

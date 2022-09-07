@@ -1,0 +1,16 @@
+{
+	"puff": {
+		"name": "Puff",
+		"slug": "puff",
+		"entry_name": "Cigarette",
+		"entries_name": "Cigarettes",
+		"description": "Cigarette tracker",
+		"private": false,
+		"icon": "🚬",
+		"color": "#e9a30c",
+		"storage_type": "",
+		"storage": "",
+		"custom_css": "",
+		"charts_placement": ""
+	}
+}
